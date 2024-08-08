@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--<head>
+    <title>CSS Combinators</title>
+    <!--Descent selectors applies to all elements containing inside div section!-->
+   <!----<style>
+         div p,h1{
+              background-color: yellow;
+         }
+    </style>!-->
+    <!--Child selector applies to child element of div-->
+    <!--Here p containing inside section element is no a child of div-->
+    <!--<style>
+        div> p,section{
+             background-color: yellow;
+        }
+   </style>
+</head>
+
+<body>
+    
+   
+<p>Paragraph containing an description about combinators</p>
+<div>
+    <h1>Heading 1</h1>
+    <h2>Heading 2 </h2>
+    <p>This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+    <section>
+        <p>Paragraph in section content</p>
+    </section>
+</div>
+</body>
+</html>!-->
+<head>
+    <!--adjacent sibiling seector(+)selects immediate adjacent to defined element here div followed by p-->
+    <!--<style>
+div+p{
+    background-color: aqua;
+}
+    </style>!-->
+    <!--Sibling selector(~)selects all elements that are next to the specified element-->
+    <style>
+        div~p,h{
+            background-color: aqua;
+        }
+            </style>
+</head>
+<body>
+    <div>
+        <p>Paragraph 1</p>
+        <p>paragraph 2</p>
+    </div>
+    <p>paragraph 3</p>
+    <p>paragrpah 4</p>
+    <div>
+        <p>paragraph 5</p>
+    <p>paragrpah 6</p>
+    </div>
+    <p>paragraph 7</p>
+    <p>paragrpah 8</p>
+    <h>heading</h>
+</body>
+</html>

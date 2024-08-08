@@ -1,0 +1,73 @@
+/*enable,disable*/
+/*input:enabled{
+    background-color: blueviolet;
+}
+input:disabled{
+    background-color: rgb(255, 55, 0);
+}
+
+/*checked notchecked*/
+/*input[type="radio"]:checked + label{
+    color:chartreuse;
+}
+input[type="radio"]:not(checked )+ label{
+    color:palevioletred;
+}
+
+/*placeholder shown*/
+/*textarea{
+    outline: none;
+    border-radius: 10px;
+    padding: 50px;
+}
+/*textarea:placeholder-shown{
+    border-color: blue;
+}
+textarea:not(:placeholder-shown){
+    border-color: black;
+}
+ 
+/*focus*/
+/*input:focus{
+    border-color: chartreuse;
+    border-radius: 10px;
+}
+
+/*valid and invalid*/
+/*input:valid{
+    border-color: yellowgreen;
+}
+input:invalid{
+    border-color:red;
+}
+/*required and optional*/
+
+/*input:required{
+    border-color: brown;
+}
+input:optional{
+    border-color: darkblue;
+}*/
+/*link,hover,visited,active*/
+/*h2{
+    color:black;
+}
+a{
+    color:tomato;
+    text-decoration: underline;
+}
+a:link{
+    background-color: black;
+}
+a:hover{
+    color: yellow;
+}
+a:visited{
+    color:darkmagenta;
+}
+a:active{
+    color:blue;
+}*/
+p:nth-child(even){
+    color: blue;
+}

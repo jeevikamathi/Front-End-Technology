@@ -1,0 +1,14 @@
+h3{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    background-color: deeppink ;
+    font-size:30px ;
+}
+p{
+    border: 4px solid rgb(117, 5, 221);
+    border-radius: 10px 50px 10px 50px;
+    font-size: 40px;
+    padding:30px;
+
+}
