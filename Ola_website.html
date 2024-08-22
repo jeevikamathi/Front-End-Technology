@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+    <style>
+        .header{
+         background-image: url("https://maps.olakrutrim.com/images/hero/home-header.png");
+         height: 100px;
+         display: flex;
+         gap: 20%;
+        
+        }
+        .nav-bar{
+                display: none;
+                padding-top: 15px;
+                padding-left: 80%; 
+
+        }
+        
+         @media only screen and (max-width: 1000px) {
+            .list,.sign-in{
+                   display: none;
+            }
+           .nav-bar{
+                display: block;
+                position: absolute;
+           }  
+           .header{
+            justify-content: center;
+            align-items: center;
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+           }
+           .button{
+            margin-bottom: 30px;
+           }
+        }
+         
+        .content{
+            font-weight: bold;
+            font-size: 25px;
+            padding-top: 25px;
+            padding-left: 100px;
+         }
+         .button{
+            border: 1px solid black;
+            height: 50px;
+            width: 250px;
+            border-radius: 40px;
+            float: right;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+         .home{
+            display: flex;
+            gap: 10%;    
+        } 
+       
+        .fill-black
+         {
+            fill: #000;
+        }
+        .svg{
+            padding-left: 25px;
+            padding-top: 25px;
+        }
+        .sub-list{
+            list-style-type: none;
+            display: flex;
+            gap: 35px;
+            margin-top :30px; 
+            margin-right: 50px;
+            padding-left: 10px;
+            
+        }
+        li:hover{
+            color: lightgreen;
+        }
+        .sign-in{
+            border: 2px solid black;
+            border-radius: 40px;
+            padding: 8px;
+            height: 50px;
+            width: 130px;
+            margin-left: 95%;
+            margin-top: 20px;
+            color: white;
+            background-color: rgb(31, 7, 31);
+
+        }
+        .hover{
+           position: relative;
+           display: inline-block;
+           cursor: pointer;
+         }
+         .options{
+            display: none;
+            position: absolute;
+            margin-top: 5px; 
+         }
+         .option{
+            padding: 10px;
+         }
+        .hover:hover .options{
+            display: block;
+        }
+        .text-align{
+            text-align: center;
+        }
+        .content-1{
+            font-size: 55px;
+            margin-top: 80px;
+            font-weight: 600;
+            
+        }
+        .content-2{
+             padding-top: 20px;
+             color: rgb(91, 85, 85);
+             font-size: 22px;
+             line-height: 1.5;
+        }
+        .buttons{
+            height: 60px;
+            width: 200px;
+            border-radius: 40px;  
+            margin-top: 5%; 
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+        .get-started{
+           background-color: rgb(28 150 77);
+           margin-left: 35%;
+           border: none;
+           color: white;
+        }
+        .contact-sales{
+            border-color: #000;
+            margin-left: 20px;
+        }
+        .image{
+            padding-left: 25%;
+            padding-top: 5%;
+        }
+        .name-size{
+            font-size: 60px;
+            font-weight: 500;
+            
+        }
+        .header-1{
+           display: flex;
+           gap: 90px;
+           margin-top: 140px;
+           margin-left: 8%;
+        
+        }
+        .center{
+            align-items: center;
+            justify-content: center;
+        }
+        .flex{
+            display: flex;
+        }
+        .body{
+            display: flex;  
+            gap:10%;
+            margin-left: 18%;
+            margin-right: 5%;
+            color: rgb(91, 85, 85);
+            /* justify-content: space-evenly; */
+        }
+        .ecosystem{
+            font-size: 50px;
+            font-weight: 900;
+            margin-top: 120px;
+            padding-left: 20%;
+            letter-spacing: 1px;
+        }
+        .navigation{
+            color: rgb(91, 85, 85);
+            font-size: 30px;
+            padding-left: 20%;
+            padding-top: 20px;
+        }
+        .view-offerings{
+            background-color: rgb(28 150 77);
+            margin-left: 20%;
+            border: none;
+            color: white;
+        }
+        .box{
+            border: 1px solid rgb(209, 203, 203);
+            height: 450px;
+            width: 760px;
+            margin-top: 70px;
+            margin-left: 20%;
+            border-radius: 10px;
+            background-color: rgb(247 248 248);
+        }
+        .background-color{
+            background-color: rgb(247 248 248);
+        }
+        .item1{
+            font-weight: 500;
+            font-size: 30px;
+            padding-top: 30px;
+            padding-left: 25px;
+        }
+        .item2{
+            font-size: 22px;
+            color: rgb(91, 85, 85);
+            padding-top: 20px;
+            padding-left: 25px;
+            line-height: 1.5;
+        }
+        .map-image{
+            padding-top: 58px;
+            
+        }
+        .box1{
+            border: 1px solid rgb(209, 203, 203);
+            height: 640px;
+            width: 380px;
+            margin-top: 70px;
+            margin-left: 20%;
+            border-radius: 10px; 
+        }
+        .box2{
+            border: 1px solid rgb(209, 203, 203);
+            height: 640px;
+            width: 380px;
+            margin-top: 70px;
+            margin-left: 10px;
+            border-radius: 10px; 
+        }
+        .map-image2{
+            padding-top: 100px;
+            padding-left: 20px;
+        }
+        .map-image3{
+            padding-top: 80px;
+            padding-left: 20px;
+        }
+        .map-image4{
+            padding-left: 20px;
+            padding-top: 200px;
+        }
+        .map-image5{
+            
+             padding-right: 8px;
+             padding-top: 190px;
+
+        }
+        .list-elements{
+            font-size: 50px;
+            font-weight: 900;
+            margin-top: 80px;
+            letter-spacing: 1px;
+            padding-left: 240px;
+            list-style-type: none;
+        }
+        .no-hover{
+            pointer-events: none;
+        }
+        .box3{
+            width: 100%;
+            height: 1080px;
+            border:  solid rgb(209, 203, 203);
+            margin-top: 60px;
+            display: flex;
+            gap:16%;
+            border-style: none;
+            
+        }
+        .para1{
+            font-size: 26px;
+            font-weight: 100;
+            line-height: 1.5;
+            padding-left: 240px;
+            
+        }
+        .para2{
+            font-size: 26px;
+            font-weight: 100;
+            line-height: 1.5;
+            color: rgb(91, 85, 85);
+            padding-left: 240px;          
+        }
+        .animation{
+            width: 500px;
+            height: 1100px;
+            
+        }
+        .padding{
+           margin-left: 240px;
+        }
+        .questions{
+            font-size: 50px;
+            font-weight: 900;
+            padding-left: 240px;
+            margin-top: 5%;
+        }
+        .quotes{
+            padding-left: 240px;
+            color: rgb(91, 85, 85);
+            line-height: 1.5;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+        .color{
+             line-height: 1.5;
+             margin-top: 30px;
+             background-color: rgb(247 248 248);
+             height: 350px;
+             border: 1px;
+             width: 60%;
+             margin-left: 240px;
+             padding-top: 20px;
+        }
+        .que{
+            color:rgb(0 0 0);
+            padding-top: 30px;
+            font-size: 18px;
+            padding-left: 60px;
+        
+        }
+       .excellence{
+            font-size: 50px;
+            font-weight: 900;
+            padding-left: 240px;
+            padding-top: 150px;
+       }
+       .excellence-content{
+            color: rgb(37, 34, 34);
+            line-height: 1.5;
+            padding-left: 240px;
+            margin-top: 30px;
+            font-size: 26px;
+            font-weight: 100px;
+       }
+       .padding-bottom{
+            margin-left: 240px;
+       }
+       .footer{
+            background-color: rgb(4, 18, 4);
+            height: 300px;
+            margin-top:30px ;
+       }
+       .white{
+        color: white;
+        padding-top: 80px;
+        display: flex;
+        gap:90px;
+        padding-left: 30px;
+       }
+       .text-alignment{
+        padding-left: 40%;
+       }
+       .horizontal-line{
+            border-bottom: 3px solid rgb(196, 186, 186);
+            padding-top: 60px;
+            margin-left: 40px;
+            width: 95%;          
+       }
+       .home {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white; 
+            height: 80px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       }
+       /* .scroll-bar{
+           font-size: 40px;
+           position: fixed; 
+       } */
+    </style>        
+   
+</head>
+<body>
+    <section class="header">
+     <div class="content" >
+        It's time to #ExitGoogleMaps, Switch to Ola Maps
+     </div>
+     <div>
+        <button class="button">Get 1 year free access </button>     
+     </div>
+    </section>
+    <section class="home ">
+        <div class="svg">
+        <svg width="166" height="25" viewBox="0 0 214 34" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Logo"><path id="Vector" d="M69.0292 16.8667L77.1084 31.9556H85.0544L69.0292 2.06665L53.0039 31.9556H60.9499L69.0292 16.8667Z" 
+            class="fill-black dark:fill-white"></path><path id="Vector_2" d="M42.7248 24.9556L42.747 2.02222H35.7109V31.9556H49.2503L53.0013 24.9556H42.7248Z" class="fill-black dark:fill-white"></path><path id="Vector_3" d="M16.0475 0.955582C12.877 0.951185 9.77652 1.88844 7.13826 3.64875C4.50001 5.40906 2.44255 7.91332 1.22624 10.8447C0.00991932 13.776 -0.310603 17.0027 0.305227 20.1165C0.921056 23.2303 2.44556 26.0912 4.68585 28.3373C6.92613 30.5834 9.78152 32.1137 12.8907 
+            32.7346C15.9999 33.3554 19.2232 33.039 22.1527 31.8253C25.0822 30.6116 27.5864 28.5551 29.3482 25.9162C31.1101 23.2772 32.0505 20.1743 32.0505 17C32.0505 12.7486 30.3652 8.67102 27.3647 5.66274C24.3642 2.65446 20.2938 0.96147 16.0475 0.955582V0.955582ZM16.0475 25.6445C14.3379 25.6533 12.6643 25.1538 11.2386 24.2093C9.81287 23.2648 8.69931 21.9178 8.039 20.339C7.3787 18.7603 7.20137 17.0208 7.52949 15.341C7.8576 13.6612 8.6764 12.1168 9.88212 10.9034C11.0878 9.68998 
+            12.6262 8.86225 14.3022 8.52508C15.9783 8.18792 17.7166 8.35649 19.2969 9.00944C20.8771 9.66239 22.2282 10.7703 23.1789 12.1928C24.1296 13.6154 24.6371 15.2884 24.6372 17C24.6372 18.1352 24.4138 19.2593 23.9799 20.3081C23.546 21.3569 22.9101 22.3099 22.1083 23.1126C21.3066 23.9153 20.3547 24.552 19.3072 24.9865C18.2597 25.4209 17.1369 25.6445 16.0031 25.6445H16.0475Z" class="fill-black dark:fill-white"></path><path id="Vector_4" d="M123.474 7.73333V6.64444L112.066 31.9556H109.846L98.6152 6.64444V7.73333L97.7274 31.9556H95.5078L96.5288 2.04443H99.0591L110.468 27.6889C110.667 
+            28.2222 110.912 28.7556 111.067 29.2444C111.232 28.7067 111.447 28.1858 111.711 27.6889L122.986 2.04443H125.494L126.515 31.9556H124.296L123.474 7.73333Z" class="fill-black dark:fill-white"></path><path id="Vector_5" d="M134.063 32H131.666L144.983 2.04443H147.891L161.208 32H158.723L154.86 23.3111H137.925L134.063 32ZM147.691 7.1111C147.159 5.82221 146.67 4.59999 146.36 3.7111C146.071 4.59999 145.583 5.93332 145.094 7.1111L138.769 21.2444H153.973L147.691 7.1111Z" class="fill-black dark:fill-white"></path><path id="Vector_6" d="M175.914 1.75903C183.704 1.75903 187.566 5.04792 187.566 11.7146C187.566 18.3813 183.704 21.6035 176.025 21.6035H168.878V31.6479H166.658V1.75903H175.914ZM175.914 19.5368C182.24 19.5368 185.414 16.9368 185.369 11.6924C185.325 6.44792 182.24 3.80348 175.869 3.80348H168.878V19.5368H175.914Z" class="fill-black dark:fill-white"></path><path id="Vector_7"
+            d="M211.423 5.73297C208.345 4.24036 204.965 3.47984 201.546 3.51074C197.44 3.51074 194.887 5.93297 194.887 8.62186C194.887 12.2663 196.885 13.3552 203.61 15.5996C210.335 17.8441 213.332 20.0441 213.332 24.4885C213.332 30.333 208.759 32.3996 203.765 32.3996C199.136 32.4299 194.654 30.771 191.158 27.733L192.224 26.0441C195.416 28.8493 199.518 30.3972 203.765 30.3996C208.671 30.3996 211.112 28.3774 211.112 24.7552C211.112 21.133 209.248 19.6885 202.078 17.2885C195.708 15.1774 192.668 13.8885 192.668 8.73297C192.668 4.55519 196.108 1.51074 
+            201.546 1.51074C205.221 1.5157 208.848 2.35128 212.155 3.95519L211.423 5.73297Z" class="fill-black dark:fill-white"></path></g></svg></div>
+            
+            <div class="list">
+            <ul class="sub-list">
+                <li>Home</li>
+                <li>Products</li>
+                <li>Pricing</li>
+                <div class="hover">
+                    <li class="developer">Developer&nbsp;&nbsp;<span class="fas">&#xf107;</span> </li>
+                      <div class="options">
+                        <div class="option">Documentation</div>
+                        <div class="option">API Reference</div>
+                      </div>
+                 </div>
+                <li>Support</li>
+            </ul>
+        </div>    
+        <div>
+            <button class="sign-in">SIGN IN</button>
+        </div>
+        <div class="nav-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70px" viewBox="0 -960 960 960" width="70px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+    </section>
+    <section>
+        <div class="content-1 text-align">Navigating India with Precision</div>
+        <div class=" content-2 text-align">Ola Maps delivers real-time,accurate navigation,uniquely designed for<br>
+        India's dynamic road conditions and ever-changing environments</div>
+    </section>
+    <section>
+        <button class="get-started buttons">Get Started now</button>
+        <button class="contact-sales buttons">Contact Sales</button>
+    </section>
+    <section>
+        <img src="https://maps.olakrutrim.com/_next/image?url=%2Fimages%2Fhero%2Fhero.png&w=3840&q=75" class="image" width="640">
+    </section>
+
+    <section class="header-1 center">
+            <span class="name-size flex center">100m+</span>
+            <span class="name-size flex center">35b+</span>
+            <span class="name-size flex center">10m+</span>
+            <span class="name-size flex center">30m+</span>
+    
+    </section>
+    <section class="body flex center">
+        <div class="flex center">
+            <img src="https://maps.olakrutrim.com/images/icon/user.svg"> 
+            <span>Active user</span>     
+        </div>
+       <div class=" flex center"> 
+        <img src="https://maps.olakrutrim.com/images/icon/console.svg">
+        <span>API Class/Month</span>
+       </div>
+       <div class=" flex center">
+        <img src="https://maps.olakrutrim.com/images/icon/car.svg">
+        <span>Vechicles connected</span>
+       </div>
+       <div class="flex center">
+        <img src="https://maps.olakrutrim.com/images/icon/company.svg">
+        <span>Businesses & places</span>
+       </div>
+
+        <!-- <section>
+          <span class="scroll-bar" ><i class="fa fa-angle-up"></i></span>
+        </section> -->
+    </section>
+    
+    <Section > 
+        <div class="ecosystem">
+            Ecosystem Driven by<br>
+            Data Integration and Processing
+        </div>
+    </Section>
+
+    <section>
+        <div class="navigation">
+            Comprehensive navigation,routing,and geospatial APIs for<br>
+            seamless data integration and enchanced user experience
+        </div>
+    </section>
+
+    <section>
+        <button class="view-offerings buttons">View Offerings</button>
+    </section>
+
+    <section class="box flex">
+       <div>
+          <div class="item1">
+          SDK's for iOS,Andriod and <br>
+          Web</div>
+         <div class="item2">We provide SDKs that allow<br>developers to integrate Ola<br> Maps into iOS and Android<br> apps, as well as web pages,<br>
+         offering comprehensive<br> solution through navigation,<br> visualisation and search<br> features.</div>
+       </div>
+        <div>
+            <img src="https://maps.olakrutrim.com/images/features/sdk.svg" class="map-image" >
+        </div>
+         
+    </section>
+    <section class="flex">
+    <section class="box1 background-color">
+        <div class="item1"> Routing</div>
+        <div class="item2">Generate optimized routes,<br> estimate travel time, identify<br>
+             nearest roads and snap set of<br> locations to identified road<br> networks.</div>
+         <div class="map-image2">
+            <img src="https://maps.olakrutrim.com/images/features/routing.svg" width="340px">
+         </div>    
+    </section>
+    <section class="box2 background-color">
+        <div class="item1">Geocoding</div>
+        <div class="item2">Fetch geo coordinates from<br>
+             addresses and human-readable<br> place names from geo<br> coordinates.</div>
+             <div class="map-image3">
+                <img src="https://maps.olakrutrim.com/images/features/location.svg" with="340px" height="300px">
+             </div>
+    </section>
+    </section>
+
+    <section class="flex">
+    <section class="box1 background-color">
+        <div class="item1"> Places</div>
+        <div class="item2">Find places by category or name,<br> with autocomplete suggestions<br> 
+            and detailed information.</div>
+         <div class="map-image4">
+            <img src="https://maps.olakrutrim.com/_next/image?url=%2Fimages%2Ffeatures%2Fautocomplete.png&w=1080&q=75`" width="340px">
+         </div>    
+    </section>
+    <section class="box2 background-color">
+        <div class="item1">Map Tiles</div>
+        <div class="item2">Render rich, dynamic and<br>
+         interactive maps with ease.</div>
+             <div class="map-image5">
+                <img src="https://maps.olakrutrim.com/_next/image?url=%2Fimages%2Ffeatures%2Ftiles.png&w=1080&q=75" with="300px" height="280px">
+             </div>
+    </section>
+    </section>
+
+    <section class="box3 flex background-color">
+        <section>
+            <ul class="list-elements no-hover ">
+            <li>Clear</li>
+            <li>Costs</li>
+            <li>Smart</li>
+            <li>Routes</li>
+        </ul>
+        <div class="para1">Enjoy 2 years of<br> complimentary<br> access with up<br> to 10 million<br> API calls for<br> long-term<br> commitments.
+        </div>
+        <div class="para2">After initial 2<br> years, costs will<br> apply. Start<br> saving today<br> and unlock<br> effortless<br> navigation.</div>
+            <button class=" view-offerings buttons padding">View Offerings</button>
+        </section>
+         <section>
+            <img src="https://maps.olakrutrim.com/images/home-pricing.svg" class="animation" >
+         </section>
+        
+    </section>
+
+    <!--Question Section-->
+    <section>
+        <div class="questions">Frequently Asked questions</div>
+        <div class="quotes">
+         Got questions? We've already got answers.<br>
+         It's like we can hear you thinking.</div>
+    </section>
+    
+    <section class="color">
+         <div class="que">What is Ola Maps?</div>
+         <div class="que">How do I get started with Ola Maps?</div>
+         <div class="que">How can I contact Ola Maps for inquiries or support?</div>
+         <div class="que">How do I report an issue or inaccuracy on the map?</div>
+         <div class="que">How does Ola Maps ensure my privacy is protected?</div> 
+    </section>
+
+    <section>
+        <div class="excellence">Navigation Excellence with<br>
+          Ola Maps</div>
+        <div class="excellence-content">
+            Join us in revolutionizing the way India navigates with<br> Ola Maps. Our platform is designed to provide<br> accurate, real-time, and contextually relevant<br> navigation services tailored for the dynamic Indian<br> 
+            road conditions.
+        </div>
+    </section>
+
+    <section>
+        <button class=" get-started buttons padding-bottom">Get Started</button>
+    </section>
+     <!--footer section-->
+    <section class="footer">
+        <section class="flex white">
+            <div><svg width="114" height="18" viewBox="0 0 114 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.57 8.92967L40.8502 16.9235H45.0599L36.57 1.08887L28.0801 16.9235H32.2898L36.57 8.92967Z" fill="white"></path><path d="M22.6357 13.2151L22.6475 1.06543H18.9199V16.9236H26.0928L28.0801 13.2151H22.6357Z" fill="white"></path><path d="M8.50168 0.500008C6.82204 0.497679 5.17944 0.99422 3.78174 1.9268C2.38403 2.85939 1.29403 4.18611 0.64964 5.73909C0.00525509 7.29207 -0.164552 9.00152 0.161704 10.6512C0.48796 12.3008 1.29562 13.8165 2.48248 15.0064C3.66935 16.1963 5.18209 17.0071 6.82929 17.336C8.47649 17.6649 10.1841 17.4973 11.7362 16.8543C13.2882 16.2113 14.6148 15.1218 15.5482 13.7237C16.4816 12.3256 16.9798 10.6818 16.9798 9.0001C16.9798 6.74777 16.087 4.58752 14.4974 2.99379C12.9077 1.40005 10.7513 0.503128 8.50168 0.500008ZM8.50168 13.5798C7.596 13.5844 6.70932 13.3198 5.95401 12.8194C5.1987 12.3191 4.60875 11.6055 4.25893 10.769C3.90911 9.93264 3.81517 9.01108 3.989 8.12117C4.16283 7.23125 4.59662 6.41302 5.23538 5.77019C5.87415 5.12735 6.68915 4.68883 7.5771 4.51021C8.46504 4.33158 9.38596 4.42089 10.2232 4.76681C11.0604 5.11273 11.7761 5.6997 12.2798 6.45333C12.7835 7.20696 13.0524 8.09332 13.0524 9.0001C13.0524 9.60151 12.9341 10.197 12.7042 10.7527C12.4743 11.3083 12.1374 11.8132 11.7126 12.2384C11.2879 12.6637 10.7836 13.001 10.2286 13.2312C9.67367 13.4613 9.07886 13.5798 8.47816 13.5798H8.50168Z" fill="white"></path><path d="M65.4148 4.09054V3.51367L59.3708 16.9231H58.1949L52.2449 3.51367V4.09054L51.7745 16.9231H50.5986L51.1395 1.07666H52.4801L58.5241 14.6627C58.63 14.9452 58.7593 15.2278 58.8416 15.4868C58.929 15.2019 59.0432 14.926 59.1826 14.6627L65.1561 1.07666H66.4849L67.0258 16.9231H65.8499L65.4148 4.09054Z" fill="white"></path><path d="M71.0239 16.9466H69.7539L76.8092 1.07666H78.3497L85.405 16.9466H84.088L82.0419 12.3434H73.0699L71.0239 16.9466ZM78.2438 3.7609C77.9616 3.07807 77.7029 2.43055 77.5383 1.95963C77.3854 2.43055 77.1267 3.13693 76.868 3.7609L73.5168 11.2485H81.5716L78.2438 3.7609Z" fill="white"></path><path d="M93.195 0.92627C97.3223 0.92627 99.3684 2.66867 99.3684 6.20056C99.3684 9.73246 97.3223 11.4395 93.2538 11.4395H89.4674V16.7609H88.2915V0.92627H93.195ZM93.195 10.3447C96.5462 10.3447 98.2278 8.96721 98.2042 6.18879C98.1807 3.41037 96.5462 2.00938 93.1714 2.00938H89.4674V10.3447H93.195Z" fill="white"></path><path d="M112.009 3.03081C110.379 2.24005 108.588 1.83714 106.777 1.85351C104.601 1.85351 103.249 3.13677 103.249 4.5613C103.249 6.49207 104.307 7.06894 107.87 8.25801C111.433 9.44708 113.021 10.6126 113.021 12.9672C113.021 16.0635 110.598 17.1584 107.952 17.1584C105.5 17.1744 103.126 16.2955 101.273 14.6861L101.838 13.7913C103.529 15.2774 105.702 16.0975 107.952 16.0988C110.551 16.0988 111.845 15.0275 111.845 13.1085C111.845 11.1895 110.857 10.4242 107.059 9.15276C103.684 8.03433 102.073 7.35149 102.073 4.62016C102.073 2.40684 103.896 0.793945 106.777 0.793945C108.724 0.79657 110.645 1.23925 112.397 2.08897L112.009 3.03081Z" fill="white"></path></svg>
+            </div>
+            <div>Get in Touch</div>
+            <div>Privacy Policy</div>
+            <div>Terms and conditions</div>
+            <div>Cookie Policy</div>
+            <div>
+            <a href="https://www.instagram.com/krutrim.ai" target="_blank" aria-label="social icon"><svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 448 512" class="size-5 fill-white opacity-40 transition-all duration-300 hover:fill-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a>&nbsp;&nbsp;
+            <a href="https://www.youtube.com/@KrutrimAI" target="_blank" aria-label="social icon"><svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 576 512" class="size-5 fill-white opacity-40 transition-all duration-300 hover:fill-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a>&nbsp;&nbsp;
+            <a href="https://x.com/Krutrim" target="_blank" aria-label="social icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask x="3" y="3" width="18" height="18"><path fill="white"></path></mask><g><path d="M17.175 3.84375H19.9354L13.9054 10.7532L21 20.1569H15.4457L11.0923 14.4548L6.11657 20.1569H3.35357L9.80271 12.764L3 3.84504H8.69571L12.6249 9.05604L17.175 3.84375ZM16.2043 18.5009H17.7343L7.86 5.41361H6.21943L16.2043 18.5009Z" fill="white" fill-opacity="0.4"></path></g></svg></a>&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/company/krutrim" target="_blank" aria-label="social icon"><svg stroke="currentColor" fill="white" stroke-width="0" viewBox="0 0 448 512" class="size-5 fill-white opacity-40 transition-all duration-300 hover:fill-primary" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a>&nbsp;&nbsp;
+            </div>        
+         </section>    
+        <section class="horizontal-line">
+
+        </section>
+        <section class="white text-alignment">
+            © 2024 Ola Maps. All Rights Reserved.
+        </section>
+    </section>
+</body>
+</html>
